@@ -10,8 +10,6 @@ class BookList extends Component {
   };
 
   render() {
-    let { listOfBooks = fantasyBooks } = this.props;
-
     const filterBook = (listOfBooks, search) => {
       return listOfBooks.filter((book) =>
         book.title.toLowerCase().includes(search)
@@ -31,7 +29,7 @@ class BookList extends Component {
               onChange={(e) =>
                 this.setState({
                   search: e.target.value,
-                  filteredBooks: filterBook(listOfBooks, e.target.value),
+                  filteredBooks: filterBook(fantasyBooks, e.target.value),
                 })
               }
             />
@@ -40,7 +38,7 @@ class BookList extends Component {
         <br />
         <Row>
           {this.state.search === ""
-            ? listOfBooks.map((book) => (
+            ? fantasyBooks.map((book) => (
                 <SingleBook
                   singleBookObject={book}
                   key={book.asin}

@@ -24,12 +24,9 @@ class App extends Component {
         <Container>
           <Row>
             <Col xs={6}>
-              <BookList changeSelectedBookAsin={this.selectedBookAsin} />
+              <BookList changeSelectedBookAsin={this.changeSelectedBookAsin} />
             </Col>
-            <Col xs={6}>
-              <div>fkdlsjfh</div>
-              {/* <CommentArea /> */}
-            </Col>
+            <Col xs={6}>{/* <CommentArea /> */}</Col>
           </Row>
         </Container>
         <BookList />
