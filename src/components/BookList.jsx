@@ -41,10 +41,18 @@ class BookList extends Component {
         <Row>
           {this.state.search === ""
             ? listOfBooks.map((book) => (
-                <SingleBook singleBookObject={book} key={book.asin} />
+                <SingleBook
+                  singleBookObject={book}
+                  key={book.asin}
+                  changeSelectedBookAsin={this.props.changeSelectedBookAsin}
+                />
               ))
             : this.state.filteredBooks.map((book) => (
-                <SingleBook singleBookObject={book} key={book.asin} />
+                <SingleBook
+                  singleBookObject={book}
+                  key={book.asin}
+                  changeSelectedBookAsin={this.props.changeSelectedBookAsin}
+                />
               ))}
         </Row>
       </Container>

@@ -5,7 +5,7 @@
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .card img {
-  height: 20rem;
+  height: 13rem;
   width: auto;
   object-fit: cover;
   border-top-left-radius: 25px;
@@ -18,7 +18,8 @@
 }
 
 .card-title {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  overflow-y: hidden;
 }
 
 .card-selected {
