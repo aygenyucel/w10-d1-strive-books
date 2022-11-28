@@ -11,7 +11,7 @@ class CommentArea extends Component {
   fetchSelectedComments = async () => {
     try {
       let response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/comments/${this.props.selectedBook.asin}`,
+        `https://striveschool-api.herokuapp.com/api/comments/${this.props.selectedBookAsin}`,
         {
           headers: {
             Authorization:
@@ -35,6 +35,14 @@ class CommentArea extends Component {
     }
   };
 
+  componentDidUpdate(prevProps, prevState) {
+    console.log("CommentArea HAS BEEN UPDATED");
+    console.log("prevProps:", prevProps);
+    console.log("currentProps:", this.props);
+    if (prevProps.selectedBookAsin !== this.props.selectedBookAsin) {
+      this.fetchSelectedComments();
+    }
+  }
   componentDidMount() {
     this.fetchSelectedComments();
   }
@@ -44,7 +52,7 @@ class CommentArea extends Component {
       <div className="my-3">
         <CommentList selectedBookComments={this.state.selectedBookComments} />
         <br />
-        <AddComment selectedBookId={this.props.selectedBook.asin} />
+        <AddComment selectedBookId={this.props.selectedBookAsin} />
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Card, Col } from "react-bootstrap";
-import CommentArea from "./CommentArea";
+// import CommentArea from "./CommentArea";
 import "./SingleBook.css";
 
 class SingleBook extends Component {
@@ -30,9 +30,9 @@ class SingleBook extends Component {
             <Card.Title>{this.props.singleBookObject.title}</Card.Title>
           </Card.Body>
         </Card>
-        {this.state.isSelected && (
+        {/* {this.state.isSelected && (
           <CommentArea selectedBook={this.state.selectedBook} />
-        )}
+        )} */}
       </Col>
     );
   }

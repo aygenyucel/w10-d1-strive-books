@@ -4,6 +4,7 @@ import "./App.css";
 import BookList from "./components/BookList";
 // import CommentArea from "./components/CommentArea";
 import { Component } from "react";
+import CommentArea from "./components/CommentArea";
 
 class App extends Component {
   state = {
@@ -26,10 +27,11 @@ class App extends Component {
             <Col xs={6}>
               <BookList changeSelectedBookAsin={this.changeSelectedBookAsin} />
             </Col>
-            <Col xs={6}>{/* <CommentArea /> */}</Col>
+            <Col xs={6}>
+              <CommentArea selectedBookAsin={this.state.selectedBookAsin} />
+            </Col>
           </Row>
         </Container>
-        <BookList />
       </div>
     );
   }
