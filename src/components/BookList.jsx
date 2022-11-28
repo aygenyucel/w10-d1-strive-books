@@ -18,22 +18,25 @@ class BookList extends Component {
 
     return (
       <Container>
-        <hr />
-        <div>Fantasy Books:</div>
-        <br />
         <div>
-          <Form className="d-flex">
-            <Form.Control
-              type="text"
-              placeholder="Search in Fantasy books..."
-              onChange={(e) =>
-                this.setState({
-                  search: e.target.value,
-                  filteredBooks: filterBook(fantasyBooks, e.target.value),
-                })
-              }
-            />
-          </Form>
+          <hr />
+
+          <div>Fantasy Books:</div>
+          <br />
+          <div>
+            <Form className="d-flex">
+              <Form.Control
+                type="text"
+                placeholder="Search in Fantasy books..."
+                onChange={(e) =>
+                  this.setState({
+                    search: e.target.value,
+                    filteredBooks: filterBook(fantasyBooks, e.target.value),
+                  })
+                }
+              />
+            </Form>
+          </div>
         </div>
         <br />
         <Row>

@@ -1,15 +1,16 @@
 .card {
-  border-radius: 25px;
+  border-radius: 10px;
   height: auto;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  cursor: pointer;
 }
 .card img {
-  height: 13rem;
+  height: 16rem;
   width: auto;
   object-fit: cover;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .card-body {
@@ -23,5 +24,6 @@
 }
 
 .card-selected {
-  border: 3px solid rgba(0, 0, 0, 0.6);
+  background-color: rgb(203, 203, 203);
+  border-bottom: 4px solid rgba(134, 27, 27, 0.6);
 }

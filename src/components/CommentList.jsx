@@ -6,11 +6,11 @@ const CommentList = (props) => {
     <ListGroup style={{ backgroundColor: "green" }}>
       {selectedBookComments?.map((comment) => (
         <ListGroup.Item>
-          <div>
+          <div className="d-flex justify-content-between">
             <strong>"{comment.comment}"</strong>
-          </div>
-          <div>
-            <span className="text-success">{comment.rate}</span>/5
+            <div>
+              <span className="text-success">{comment.rate}</span>/5
+            </div>
           </div>
           {/* <div>elementId: {comment.elementId}</div> */}
         </ListGroup.Item>

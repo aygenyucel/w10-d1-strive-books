@@ -32,7 +32,7 @@ class AddComment extends Component {
       // (it pauses the execution of your function)
 
       let response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/comments/`,
+        "https://striveschool-api.herokuapp.com/api/comments/",
         {
           method: "POST",
           body: JSON.stringify(this.state.newComment),
@@ -48,7 +48,9 @@ class AddComment extends Component {
       if (response.ok) {
         alert("Added your comment!");
         this.setState({
+          ...this.state,
           newComment: {
+            ...this.state.newComment,
             comment: "",
             rate: "",
           },
@@ -68,11 +70,8 @@ class AddComment extends Component {
     return (
       <div>
         {!this.state.isClicked && (
-          <Button
-            onClick={this.onClick}
-            style={{ backgroundColor: "green", fontSize: "0.8rem" }}
-          >
-            Add Comment
+          <Button className="add-comment-btn" onClick={this.onClick}>
+            Add New Comment
           </Button>
         )}
         {this.state.isClicked && (

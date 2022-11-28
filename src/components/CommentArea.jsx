@@ -2,6 +2,7 @@
 import { Component } from "react";
 import CommentList from "./CommentList";
 import AddComment from "./AddComment";
+import "./CommentArea.css";
 
 class CommentArea extends Component {
   state = {
@@ -49,9 +50,11 @@ class CommentArea extends Component {
 
   render() {
     return (
-      <div className="my-3">
-        <CommentList selectedBookComments={this.state.selectedBookComments} />
-        <br />
+      <div className="position-fixed">
+        <div className="comment-area">
+          <CommentList selectedBookComments={this.state.selectedBookComments} />
+          <br />
+        </div>
         <AddComment selectedBookId={this.props.selectedBookAsin} />
       </div>
     );
