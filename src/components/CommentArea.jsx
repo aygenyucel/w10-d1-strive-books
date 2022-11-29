@@ -45,7 +45,9 @@ class CommentArea extends Component {
     }
   }
   componentDidMount() {
-    this.fetchSelectedComments();
+    if (this.props.selectedBookAsin !== "") {
+      this.fetchSelectedComments();
+    }
   }
 
   render() {

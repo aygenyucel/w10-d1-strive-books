@@ -11,7 +11,7 @@ class SingleBook extends Component {
 
   render() {
     return (
-      <Col xs={6} className="mb-3 d-flex flex-column" key={this.props.key}>
+      <Col className="mb-3 d-flex flex-column" key={this.props.key}>
         <Card
           onClick={() => {
             this.setState({
